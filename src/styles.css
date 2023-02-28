@@ -23,12 +23,24 @@
 }
 
 :root {
+  /* Font families */
   --ff-title: 'DroidSans';
   --ff-subtitle: 'MuktaVaaniRegular';
   --ff-text: 'BiryaniRegular';
+
+  /* Colors */
+  --clr-body-primary: #FFD6FF;
+  --clr-body-secondary: #E7C6FF;
+  --clr-footer: #C8B6FF;
+  --clr-button: #BBD0FF;
+}
+
+body, html {
+  height: 100%;
 }
 
 body {
   font-family: var(--ff-text);
+  background-color: var(--clr-body-primary);
 }
 

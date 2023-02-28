@@ -1,0 +1,49 @@
+/* Hero */
+/* REF: https://www.w3schools.com/howto/howto_css_hero_image.asp */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../../images/site/cafe.jpg');
+  min-height: 93svh;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* min-height: 90svh; */
+  --ff-title: 'DroidSans';
+  color: #fff;
+  font-size: 4rem;
+  font-family: var(--ff-title);
+
+  display: flex;
+  gap: 10px;
+}
+
+.container img {
+  align-self: center;
+  filter: invert(100%);
+}
+
+.btn {
+  --clr-button: #BBD0FF;
+  --clr-button-border: #B8C0FF;
+  font-size: 1.5rem;
+  padding: 1em 2em;
+  border-radius: 50px;
+  background-color: var(--clr-button);
+  border: 5px solid var(--clr-button-border);
+
+}
+
+/* .hero img {
+  max-height: 100svh;
+} */
