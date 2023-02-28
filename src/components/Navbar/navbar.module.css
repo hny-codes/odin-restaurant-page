@@ -1,0 +1,18 @@
+/* Navbar */
+.nav-bar {
+  margin: 0 auto;
+  padding-block: 1rem;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  align-self: flex-start;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
