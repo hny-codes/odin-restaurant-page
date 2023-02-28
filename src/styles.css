@@ -1,4 +1,34 @@
-h1 {
-  color: white;
-  background-color: black;
+/* Global */
+@font-face {
+  font-family: 'DroidSans';
+  src: url(../fonts/droid-sans.bold.ttf);
 }
+
+@font-face {
+  font-family: 'MuktaVaaniRegular';
+  src: url(../fonts/MuktaVaani-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'BiryaniRegular';
+  src: url(../fonts/Biryani-Regular.ttf);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-title: 'DroidSans';
+  --ff-subtitle: 'MuktaVaaniRegular';
+  --ff-text: 'BiryaniRegular';
+}
+
+body {
+  font-family: var(--ff-text);
+}
+
