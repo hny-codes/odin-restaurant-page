@@ -1,8 +1,8 @@
 .btn {
   --clr-button: #bbd0ff;
   --clr-button-border: #b8c0ff;
-  font-size: 1.5rem;
-  padding: 1em 2em;
+  font-size: 2rem;
+  padding: 0.7em 1.5em;
   border-radius: 50px;
   background-color: var(--clr-button);
   border: 5px solid var(--clr-button-border);

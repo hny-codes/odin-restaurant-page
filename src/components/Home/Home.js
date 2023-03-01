@@ -140,12 +140,33 @@ const Home = () => {
   };
 
   // Home Location
-  const HomeLocation = () => {};
+  const HomeLocation = () => {
+    const locationSection = document.createElement('section');
+    locationSection.classList.add(styles['location-section']);
+
+    const locationContainer = document.createElement('div');
+    locationContainer.classList.add(styles['location-container']);
+    const locationText = document.createElement('h2');
+    const locationSubtext = document.createElement('h2');
+    const locationBtn = Button('Locations');
+
+    locationText.textContent = "We'd love to see you here,";
+    locationSubtext.textContent = 'Boba-enthusiasts!';
+
+    locationContainer.appendChild(locationText);
+    locationContainer.appendChild(locationSubtext);
+    locationContainer.appendChild(locationBtn);
+
+    locationSection.appendChild(locationContainer);
+
+    return locationSection;
+  };
 
   // Append sections to wrapper
   wrapper.appendChild(Hero());
   wrapper.appendChild(HeroSub());
   wrapper.appendChild(HomeFact());
+  wrapper.appendChild(HomeLocation());
 
   return wrapper;
 };

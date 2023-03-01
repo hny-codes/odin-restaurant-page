@@ -119,3 +119,21 @@
   height: 150%;
   align-self: center;
 }
+
+/* Location Section */
+.location-section {
+  width: 80%;
+  margin: 7rem auto;
+}
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.location-container h2 {
+  font-size: 2rem;
+}
