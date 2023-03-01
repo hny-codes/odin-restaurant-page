@@ -1,5 +1,7 @@
 /* Hero */
 /* REF: https://www.w3schools.com/howto/howto_css_hero_image.asp */
+@import '../../styles.css';
+
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../../../images/site/cafe.jpg');
@@ -17,9 +19,8 @@
   align-items: center;
 }
 
-.container {
+.hero-container {
   /* min-height: 90svh; */
-  --ff-title: 'DroidSans';
   color: #fff;
   font-size: 4rem;
   font-family: var(--ff-title);
@@ -28,7 +29,7 @@
   gap: 10px;
 }
 
-.container img {
+.hero-container img {
   align-self: center;
   filter: invert(100%);
 }
@@ -44,6 +45,53 @@
 
 }
 
-/* .hero img {
-  max-height: 100svh;
-} */
+/* Hero Sub */
+.sub-container {
+  display: grid;
+  grid: 1fr / repeat(3, 1fr);
+  place-items: center;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sub-text {
+  display: grid;
+  grid: 2fr 1fr 1fr / 1fr;
+  gap: 3em;
+}
+
+.sub-text h2 {
+  font-family: var(--ff-title);
+  font-size: 4rem;
+}
+
+.sub-text p {
+  font-family: var(--ff-subtitle);
+  font-size: 1.5rem;
+}
+
+.left-image img,
+.right-image img {
+  margin-block: 5rem;
+}
+
+.left-image {
+  justify-self: start;
+  align-self: end;
+}
+
+.left-image img {
+  max-width: 70%;
+  transform: rotateZ(30deg);
+}
+
+.right-image {
+  justify-self: end;
+  align-self: start;
+}
+
+.right-image img {
+  max-width: 70%;
+  transform: rotateZ(-30deg);
+}
