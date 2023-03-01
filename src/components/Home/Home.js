@@ -1,5 +1,6 @@
 import styles from './home.module.css';
 import '../../styles.css';
+import Button from '../Button/Button';
 import MugSvg from '../../../images/svg/mug-transparent.svg';
 import BobaBrown from '../../../images/boba/boba1.png';
 import BobaGreen from '../../../images/boba/boba2.png';
@@ -31,9 +32,7 @@ const Home = () => {
     hero.appendChild(heroContainer);
 
     // Hero Button
-    const heroBtn = document.createElement('button');
-    heroBtn.classList.add(styles.btn);
-    heroBtn.textContent = 'Take a look!';
+    const heroBtn = Button('Take a look!');
     hero.appendChild(heroBtn);
 
     return hero;
@@ -57,12 +56,11 @@ const Home = () => {
     subTextContainer.classList.add(styles['sub-text'])
     const subTextHeader = document.createElement('h2');
     const subTextSubheader = document.createElement('p');
-    const subTextBtn = document.createElement('button');
+    const subTextBtn = Button('See more');
 
     subTextHeader.textContent = 'Love Boba? We do too!';
     subTextSubheader.textContent =
       'Tons of selections and toppings to customize from!';
-    subTextBtn.textContent = 'See more';
 
     subTextContainer.appendChild(subTextHeader);
     subTextContainer.appendChild(subTextSubheader);

@@ -34,17 +34,6 @@
   filter: invert(100%);
 }
 
-.btn {
-  --clr-button: #BBD0FF;
-  --clr-button-border: #B8C0FF;
-  font-size: 1.5rem;
-  padding: 1em 2em;
-  border-radius: 50px;
-  background-color: var(--clr-button);
-  border: 5px solid var(--clr-button-border);
-
-}
-
 /* Hero Sub */
 .sub-container {
   display: grid;
