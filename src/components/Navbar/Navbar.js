@@ -1,6 +1,8 @@
 import styles from './navbar.module.css';
 import coffeeIcon from '../../../images/svg/coffee.svg';
 
+import Menu from '../Menu/Menu';
+
 const Navbar = () => {
   // Add wrapper class
   const wrapper = document.createElement('div');
@@ -56,7 +58,26 @@ const Navbar = () => {
 
   nav.appendChild(about);
 
+  // Click listener for nav items
+  handleClick(nav);
+
   return wrapper;
+};
+
+const handleClick = (nav) => {
+  const content = document.getElementById('content');
+
+  nav.childNodes.forEach((listItem) => {
+    listItem.addEventListener('click', () => {
+      console.log(listItem.textContent);
+      const mainContent = content.childNodes[1];
+
+      if (listItem.textContent === 'Menu') {
+        console.log(Menu());
+        mainContent.parentNode.replaceChild(Menu(), mainContent);
+      }
+    });
+  });
 };
 
 export default Navbar;
