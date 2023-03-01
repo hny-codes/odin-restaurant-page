@@ -1,0 +1,10 @@
+@import '../../styles.css';
+
+.footer {
+  margin: 0 auto;
+  background-color: var(--clr-footer);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.7rem;
+  border-top: 5px solid var(--clr-body-extra);
+}

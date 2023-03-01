@@ -1,7 +1,10 @@
+@import '../../styles.css';
+
 .btn {
   --clr-button: #bbd0ff;
   --clr-button-border: #b8c0ff;
   font-size: 2rem;
+  font-family: var(--ff-title);
   padding: 0.7em 1.5em;
   border-radius: 50px;
   background-color: var(--clr-button);
