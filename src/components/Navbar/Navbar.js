@@ -1,7 +1,9 @@
 import styles from './navbar.module.css';
 import coffeeIcon from '../../../images/svg/coffee.svg';
+import MugSvg from '../../../images/svg/mug-transparent.svg';
 
 import Menu from '../Menu/Menu';
+import Home from '../Home/Home';
 
 const Navbar = () => {
   // Add wrapper class
@@ -64,17 +66,49 @@ const Navbar = () => {
   return wrapper;
 };
 
+const addHomeLogo = (nav) => {
+  // Check if nav has the home nav item - do nothing if true
+  if(nav.childNodes[0].classList.contains('E6d6y00estgZubRNwG77')){
+    return;
+  }else {
+    // Create the home nav item 
+    const homeLogoContainer = document.createElement('div');
+    homeLogoContainer.classList.add(styles['nav-item']);
+    homeLogoContainer.classList.add(styles['home-item']);
+
+    const homeLogo = document.createElement('img');
+    homeLogo.src = MugSvg;
+    homeLogo.height = 32;
+    homeLogoContainer.appendChild(homeLogo);
+
+    const homeText = document.createElement('h1');
+    homeText.textContent = 'Tip Top Cafe';
+    homeLogoContainer.appendChild(homeText);
+
+    // Add event listener to remove itself and redirect back to home page
+    homeLogoContainer.addEventListener('click', () => {
+      nav.removeChild(nav.childNodes[0]);
+        const content = document.getElementById('content');
+        const mainContent = content.childNodes[1];
+        mainContent.parentNode.replaceChild(Home(), mainContent);
+    });
+
+    nav.prepend(homeLogoContainer);
+  }
+};
+
+
 const handleClick = (nav) => {
   const content = document.getElementById('content');
 
   nav.childNodes.forEach((listItem) => {
     listItem.addEventListener('click', () => {
-      console.log(listItem.textContent);
+      // console.log(listItem.textContent);
       const mainContent = content.childNodes[1];
 
       if (listItem.textContent === 'Menu') {
-        console.log(Menu());
         mainContent.parentNode.replaceChild(Menu(), mainContent);
+        addHomeLogo(nav);
       }
     });
   });

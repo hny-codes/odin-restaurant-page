@@ -7,12 +7,16 @@
   justify-content: space-between;
 }
 
-img {
+.nav-bar img {
   align-self: flex-start;
 }
 
 .nav-item {
   display: flex;
-  align-items: center;
+  place-self: center;
   gap: 3px;
+}
+
+.home-item {
+  font-size: 1.1rem;
 }
