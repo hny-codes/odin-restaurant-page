@@ -4,6 +4,10 @@ import Button from '../Button/Button';
 import MugSvg from '../../../images/svg/mug-transparent.svg';
 import BobaBrown from '../../../images/boba/boba1.png';
 import BobaGreen from '../../../images/boba/boba2.png';
+import BobaYellow from '../../../images/boba/boba3.png';
+import CreditCard from '../../../images/svg/credit-card.svg';
+import Heart from '../../../images/svg/heart.svg';
+import GiftBox from '../../../images/svg/gift.svg';
 
 const Home = () => {
   const wrapper = document.createElement('div');
@@ -41,7 +45,7 @@ const Home = () => {
   // Hero Subsection
   const HeroSub = () => {
     // Sub section container - grid
-    const subContainer = document.createElement('div');
+    const subContainer = document.createElement('section');
     subContainer.classList.add(styles['sub-container']);
 
     // Left Image section
@@ -53,7 +57,7 @@ const Home = () => {
 
     // Center section - Text section
     const subTextContainer = document.createElement('div');
-    subTextContainer.classList.add(styles['sub-text'])
+    subTextContainer.classList.add(styles['sub-text']);
     const subTextHeader = document.createElement('h2');
     const subTextSubheader = document.createElement('p');
     const subTextBtn = Button('See more');
@@ -78,11 +82,62 @@ const Home = () => {
     subContainer.appendChild(subImageRightContainer);
 
     return subContainer;
-
   };
 
   // Home Facts
-  const HomeFact = () => {};
+  const HomeFact = () => {
+    const factSection = document.createElement('section');
+    factSection.classList.add(styles['fact-container']);
+
+    // Image section
+    const factImageLeft = document.createElement('img');
+    factImageLeft.classList.add(styles['fact-img']);
+    factImageLeft.src = BobaYellow;
+
+    factSection.appendChild(factImageLeft);
+
+    // Fact section
+    const infoContainer = document.createElement('div');
+    infoContainer.classList.add(styles['info-container']);
+
+    // Fact 1
+    const freshInfoContainer = document.createElement('div');
+    freshInfoContainer.classList.add(styles.info);
+    const freshInfo = document.createElement('h3');
+    freshInfo.textContent = 'Fresh ingredients';
+    const freshIcon = document.createElement('img');
+    freshIcon.src = Heart;
+    freshInfoContainer.appendChild(freshIcon);
+    freshInfoContainer.appendChild(freshInfo);
+
+    // Fact 2
+    const giftInfoContainer = document.createElement('div');
+    giftInfoContainer.classList.add(styles.info);
+    const giftInfo = document.createElement('h3');
+    giftInfo.textContent = 'Buy 2 - Gift 1 free';
+    const giftIcon = document.createElement('img');
+    giftIcon.src = GiftBox;
+    giftInfoContainer.appendChild(giftIcon);
+    giftInfoContainer.appendChild(giftInfo);
+
+    // Fact 3
+    const cardInfoContainer = document.createElement('div');
+    cardInfoContainer.classList.add(styles.info);
+    const cardInfo = document.createElement('h3');
+    cardInfo.textContent = 'We accept all currencies!';
+    const cardIcon = document.createElement('img');
+    cardIcon.src = CreditCard;
+    cardInfoContainer.appendChild(cardIcon);
+    cardInfoContainer.appendChild(cardInfo);
+
+    infoContainer.appendChild(freshInfoContainer);
+    infoContainer.appendChild(giftInfoContainer);
+    infoContainer.appendChild(cardInfoContainer);
+
+    factSection.appendChild(infoContainer);
+
+    return factSection;
+  };
 
   // Home Location
   const HomeLocation = () => {};
@@ -90,6 +145,7 @@ const Home = () => {
   // Append sections to wrapper
   wrapper.appendChild(Hero());
   wrapper.appendChild(HeroSub());
+  wrapper.appendChild(HomeFact());
 
   return wrapper;
 };

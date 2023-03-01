@@ -41,7 +41,7 @@
   place-items: center;
   text-align: center;
   width: 80%;
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 
 .sub-text {
@@ -83,4 +83,39 @@
 .right-image img {
   max-width: 70%;
   transform: rotateZ(-30deg);
+}
+
+/* Hero Fact Section */
+.fact-container {
+  display: grid;
+  grid: 1fr / repeat(2, 1fr);
+  width: 80%;
+  background-color: var(--clr-body-secondary);
+  margin: 0 auto;
+  font-family: var(--ff-title);
+  font-size: 1.3rem;
+  padding: 3rem 0;
+}
+
+.fact-img {
+  place-self: center;
+  transform: rotateZ(3deg);
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block: 4rem;
+  text-transform: capitalize;
+}
+
+.info {
+  display: flex;
+  gap: 10px;
+}
+
+.info img {
+  height: 150%;
+  align-self: center;
 }
