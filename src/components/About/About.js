@@ -14,7 +14,7 @@ const About = () => {
 
   const AboutItem = (title, text) => {
     const aboutContainer = document.createElement('div');
-    aboutContainer.classList.add(styles.about)
+    aboutContainer.classList.add(styles.about);
     const aboutItemTitle = document.createElement('h3');
     const aboutItemBody = document.createElement('p');
 
