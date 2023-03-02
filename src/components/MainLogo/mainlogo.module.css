@@ -1,0 +1,9 @@
+.nav-item {
+  display: flex;
+  place-self: center;
+  gap: 3px;
+}
+
+.home-item {
+  font-size: 1.1rem;
+}

@@ -6,6 +6,7 @@ import Menu from '../Menu/Menu';
 import Home from '../Home/Home';
 import Locations from '../Locations/Locations';
 import About from '../About/About';
+import MainLogo from '../MainLogo/MainLogo';
 
 const Navbar = () => {
   // Add wrapper class
@@ -68,37 +69,6 @@ const Navbar = () => {
   return wrapper;
 };
 
-const addHomeLogo = (nav) => {
-  // Check if nav has the home nav item - do nothing if true
-  if (nav.childNodes[0].classList.contains('E6d6y00estgZubRNwG77')) {
-    return;
-  } else {
-    // Create the home nav item
-    const homeLogoContainer = document.createElement('div');
-    homeLogoContainer.classList.add(styles['nav-item']);
-    homeLogoContainer.classList.add(styles['home-item']);
-
-    const homeLogo = document.createElement('img');
-    homeLogo.src = MugSvg;
-    homeLogo.height = 32;
-    homeLogoContainer.appendChild(homeLogo);
-
-    const homeText = document.createElement('h1');
-    homeText.textContent = 'Tip Top Cafe';
-    homeLogoContainer.appendChild(homeText);
-
-    // Add event listener to remove itself and redirect back to home page
-    homeLogoContainer.addEventListener('click', () => {
-      nav.removeChild(nav.childNodes[0]);
-      const content = document.getElementById('content');
-      const mainContent = content.childNodes[1];
-      mainContent.parentNode.replaceChild(Home(), mainContent);
-    });
-
-    nav.prepend(homeLogoContainer);
-  }
-};
-
 const handleClick = (nav) => {
   const content = document.getElementById('content');
 
@@ -114,7 +84,7 @@ const handleClick = (nav) => {
       } else if (listItem.textContent === 'About') {
         mainContent.parentNode.replaceChild(About(), mainContent);
       }
-      addHomeLogo(nav);
+      MainLogo();
     });
   });
 };

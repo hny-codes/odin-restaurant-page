@@ -8,6 +8,9 @@ import BobaYellow from '../../../images/boba/boba3.png';
 import CreditCard from '../../../images/svg/credit-card.svg';
 import Heart from '../../../images/svg/heart.svg';
 import GiftBox from '../../../images/svg/gift.svg';
+import Menu from '../Menu/Menu';
+import Locations from '../Locations/Locations';
+import MainLogo from '../MainLogo/MainLogo';
 
 const Home = () => {
   const wrapper = document.createElement('div');
@@ -61,6 +64,16 @@ const Home = () => {
     const subTextHeader = document.createElement('h2');
     const subTextSubheader = document.createElement('p');
     const subTextBtn = Button('See more');
+
+    subTextBtn.addEventListener('click', () => {
+      const content = document.getElementById('content');
+      // Get Nav bar
+      const nav = document.querySelector('.YzUFKWXwzBzalDos9V6Q');
+      console.log(nav);
+      const mainContent = content.childNodes[1];
+      mainContent.parentNode.replaceChild(Menu(), mainContent);
+      MainLogo();
+    });
 
     subTextHeader.textContent = 'Love Boba? We do too!';
     subTextSubheader.textContent =
@@ -149,6 +162,16 @@ const Home = () => {
     const locationText = document.createElement('h2');
     const locationSubtext = document.createElement('h2');
     const locationBtn = Button('Locations');
+
+    locationBtn.addEventListener('click', () => {
+      const content = document.getElementById('content');
+      // Get Nav bar
+      const nav = document.querySelector('.YzUFKWXwzBzalDos9V6Q');
+      console.log(nav);
+      const mainContent = content.childNodes[1];
+      mainContent.parentNode.replaceChild(Locations(), mainContent);
+      MainLogo();
+    });
 
     locationText.textContent = "We'd love to see you here,";
     locationSubtext.textContent = 'Boba-enthusiasts!';
