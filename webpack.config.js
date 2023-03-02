@@ -24,11 +24,6 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-        exclude: /\.module\.css$/,
-      },
-      {
-        test: /\.css$/,
         use: [
           'style-loader',
           {
@@ -40,6 +35,11 @@ const config = {
           },
         ],
         include: /\.module\.css$/,
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+        exclude: /\.module\.css$/,
       },
       {
         test: /\.svg$/,
