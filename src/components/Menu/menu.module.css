@@ -60,6 +60,10 @@
   border-bottom: 2px solid black;
 }
 
+.item img {
+  filter: drop-shadow(0 0.2rem 0.2rem black);
+}
+
 /* REF */
 /* https://stackoverflow.com/questions/16818792/center-a-pseudo-element */
 .item span::before {
@@ -77,5 +81,5 @@
   bottom: 65px;
   left: 50%;
   margin-left: -97px;
-  
+  filter: drop-shadow(0 0.2rem 0.3rem black);
 }

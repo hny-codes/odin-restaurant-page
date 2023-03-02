@@ -63,6 +63,7 @@
 .left-image img,
 .right-image img {
   margin-block: 5rem;
+  filter: drop-shadow(0 0 0.5rem black);
 }
 
 .left-image {
@@ -100,6 +101,7 @@
 .fact-img {
   place-self: center;
   transform: rotateZ(3deg);
+  filter: drop-shadow(0 0 0.5rem black);
 }
 
 .info-container {
