@@ -12,6 +12,7 @@ const Navbar = () => {
   // Add wrapper class
   const wrapper = document.createElement('div');
   wrapper.classList.add('wrapper');
+  wrapper.classList.add(styles.wrapper);
 
   // Nav bar
   const nav = document.createElement('nav');

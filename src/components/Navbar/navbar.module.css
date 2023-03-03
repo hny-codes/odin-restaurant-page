@@ -1,4 +1,15 @@
 /* Navbar */
+@import '../../styles.css';
+
+.wrapper {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: var(--clr-body-primary);
+}
+
 .nav-bar {
   margin: 0 auto;
   padding-block: 1rem;
