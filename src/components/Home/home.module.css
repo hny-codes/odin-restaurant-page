@@ -134,6 +134,7 @@
   justify-content: center;
   text-align: center;
   gap: 40px;
+  padding-bottom: 2rem;
 }
 
 .location-container h2 {
