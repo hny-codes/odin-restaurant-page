@@ -9,6 +9,7 @@ const MainLogo = () => {
     return;
   } else {
     const homeLogoContainer = document.createElement('div');
+    homeLogoContainer.classList.add(styles.home);
     homeLogoContainer.classList.add(styles['nav-item']);
     homeLogoContainer.classList.add('E6d6y00estgZubRNwG77');
 

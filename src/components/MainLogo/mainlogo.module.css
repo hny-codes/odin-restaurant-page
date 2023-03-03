@@ -1,3 +1,24 @@
+.home {
+  animation: enterIn 1s;
+  cursor: pointer;
+}
+
+@keyframes enterIn {
+  0% {
+    transform: translateX(-1000%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.home-leave {
+  animation: enterOut 1s;
+}
+
 .nav-item {
   display: flex;
   place-self: center;
