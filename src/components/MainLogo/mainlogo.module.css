@@ -1,6 +1,11 @@
 .home {
   animation: enterIn 1s;
+  transition: all 0.1s ease;
   cursor: pointer;
+}
+
+.home:hover {
+  scale: 1.1;
 }
 
 @keyframes enterIn {
