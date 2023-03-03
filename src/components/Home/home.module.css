@@ -140,3 +140,52 @@
 .location-container h2 {
   font-size: 2rem;
 }
+
+@keyframes slideBobaLeft {
+  0% {
+    transform: translateX(-50%) rotateZ(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) rotateZ(30deg);
+    opacity: 1;
+  }
+}
+
+.slide-boba-left {
+   animation: 0.5s slideBobaLeft forwards;
+}
+
+@keyframes slideBobaRight {
+  0% {
+    transform: translateX(50%) rotateZ(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) rotateZ(-30deg);
+    opacity: 1;
+  }
+}
+
+.slide-boba-right {
+   animation: 1.5s slideBobaRight forwards;
+}
+
+
+@keyframes slideBobaInfo {
+  0% {
+    transform: translateX(-50%) rotateZ(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) rotateZ(5deg);
+    opacity: 1;
+  }
+}
+
+.slide-boba-info {
+  animation: 1s slideBobaInfo forwards;
+}

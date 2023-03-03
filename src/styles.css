@@ -29,14 +29,15 @@
   --ff-text: 'BiryaniRegular';
 
   /* Colors */
-  --clr-body-primary: #FFD6FF;
-  --clr-body-secondary: #E7C6FF;
-  --clr-body-extra: #B8C0FF;
-  --clr-footer: #C8B6FF;
-  --clr-button: #BBD0FF;
+  --clr-body-primary: #ffd6ff;
+  --clr-body-secondary: #e7c6ff;
+  --clr-body-extra: #b8c0ff;
+  --clr-footer: #c8b6ff;
+  --clr-button: #bbd0ff;
 }
 
-body, html {
+body,
+html {
   height: 100%;
 }
 
@@ -67,5 +68,53 @@ body {
 }
 
 .wrapper {
-  animation: 2s cubic-bezier(.25, 1, .30, 1) wipe-in-up both;
+  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-up both;
+}
+
+@keyframes showInHeader {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.show-header {
+  animation: 0.7s showInHeader forwards;
+}
+
+@keyframes showInSubheader {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.show-subheader {
+  animation: 0.7s showInSubheader forwards;
+}
+
+@keyframes showInText {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.show-text {
+  animation: 1s showInText forwards;
 }

@@ -11,6 +11,7 @@ import GiftBox from '../../../images/svg/gift.svg';
 import Menu from '../Menu/Menu';
 import Locations from '../Locations/Locations';
 import MainLogo from '../MainLogo/MainLogo';
+import Observer from '../../IntersectionObserver/IntersectionObserver';
 
 const Home = () => {
   const wrapper = document.createElement('div');
@@ -57,6 +58,7 @@ const Home = () => {
     const subImageLeft = document.createElement('img');
     subImageLeft.src = BobaBrown;
     subImageLeftContainer.appendChild(subImageLeft);
+    Observer(styles['slide-boba-left'], subImageLeft);
 
     // Center section - Text section
     const subTextContainer = document.createElement('div');
@@ -79,6 +81,9 @@ const Home = () => {
     subTextSubheader.textContent =
       'Tons of selections and toppings to customize from!';
 
+    Observer('show-header', subTextHeader);
+    Observer('show-subheader', subTextSubheader);
+
     subTextContainer.appendChild(subTextHeader);
     subTextContainer.appendChild(subTextSubheader);
     subTextContainer.appendChild(subTextBtn);
@@ -89,6 +94,7 @@ const Home = () => {
     const subImageRight = document.createElement('img');
     subImageRight.src = BobaGreen;
     subImageRightContainer.appendChild(subImageRight);
+    Observer(styles['slide-boba-right'], subImageRight);
 
     subContainer.appendChild(subImageLeftContainer);
     subContainer.appendChild(subTextContainer);
@@ -107,6 +113,7 @@ const Home = () => {
     factImageLeft.classList.add(styles['fact-img']);
     factImageLeft.src = BobaYellow;
 
+    Observer(styles['slide-boba-info'], factImageLeft);
     factSection.appendChild(factImageLeft);
 
     // Fact section
@@ -142,6 +149,10 @@ const Home = () => {
     cardIcon.src = CreditCard;
     cardInfoContainer.appendChild(cardIcon);
     cardInfoContainer.appendChild(cardInfo);
+
+    Observer('show-text', freshInfo);
+    Observer('show-text', giftInfo);
+    Observer('show-text', cardInfo);
 
     infoContainer.appendChild(freshInfoContainer);
     infoContainer.appendChild(giftInfoContainer);
