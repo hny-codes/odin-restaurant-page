@@ -2,7 +2,8 @@
 @import '../../styles.css';
 
 .wrapper {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+  border-bottom: 2px solid black;
   position: fixed;
   top: 0;
   width: 100%;
@@ -26,6 +27,12 @@
   display: flex;
   place-self: center;
   gap: 3px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.nav-item:hover {
+  scale: 1.1;
 }
 
 .home-item {
