@@ -55,8 +55,10 @@ const About = () => {
     return bodyAbout;
   };
 
-  wrapper.appendChild(Hero());
-  wrapper.appendChild(AboutBody());
+  setTimeout(() => {
+    wrapper.appendChild(Hero());
+    wrapper.appendChild(AboutBody());
+  }, 1000);
   return wrapper;
 };
 

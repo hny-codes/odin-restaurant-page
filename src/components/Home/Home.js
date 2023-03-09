@@ -75,6 +75,7 @@ const Home = () => {
       const mainContent = content.childNodes[1];
       mainContent.parentNode.replaceChild(Menu(), mainContent);
       MainLogo();
+      
     });
 
     subTextHeader.textContent = 'Love Boba? We do too!';
@@ -197,10 +198,13 @@ const Home = () => {
   };
 
   // Append sections to wrapper
-  wrapper.appendChild(Hero());
-  wrapper.appendChild(HeroSub());
-  wrapper.appendChild(HomeFact());
-  wrapper.appendChild(HomeLocation());
+  setTimeout(() => {
+    console.log("hello!!");
+    wrapper.appendChild(Hero());
+    wrapper.appendChild(HeroSub());
+    wrapper.appendChild(HomeFact());
+    wrapper.appendChild(HomeLocation());
+  }, 1000);
 
   return wrapper;
 };

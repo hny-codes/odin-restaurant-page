@@ -60,8 +60,10 @@ const Locations = () => {
     return bodyLocation;
   };
 
-  wrapper.appendChild(Hero());
-  wrapper.appendChild(LocationBody());
+  setTimeout(() => {
+    wrapper.appendChild(Hero());
+    wrapper.appendChild(LocationBody());
+  }, 1000);
   return wrapper;
 };
 

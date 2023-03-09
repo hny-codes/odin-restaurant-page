@@ -80,8 +80,10 @@ const Menu = () => {
     return bodyContainer;
   };
 
-  wrapper.appendChild(Hero());
-  wrapper.appendChild(MenuBody());
+  setTimeout(() => {
+    wrapper.appendChild(Hero());
+    wrapper.appendChild(MenuBody());
+  }, 1000);
   return wrapper;
 };
 
