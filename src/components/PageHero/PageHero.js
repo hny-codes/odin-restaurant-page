@@ -1,4 +1,5 @@
 import styles from './pagehero.module.css';
+import Observer from '../../IntersectionObserver/IntersectionObserver';
 
 const PageHero = (image, text) => {
   const hero = document.createElement('header');
@@ -9,6 +10,7 @@ const PageHero = (image, text) => {
   textContent.textContent = text;
   hero.appendChild(textContent);
 
+  Observer('show-header', textContent);
   return hero;
 };
 
