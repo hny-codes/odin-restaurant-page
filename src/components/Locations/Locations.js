@@ -3,6 +3,8 @@ import styles from './locations.module.css';
 import PageHero from '../PageHero/PageHero';
 import siteImage from '../../../images/site/location-1.jpg';
 
+import Observer from '../../IntersectionObserver/IntersectionObserver';
+
 const Locations = () => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('wrapper');
@@ -37,6 +39,7 @@ const Locations = () => {
       locationNumber,
       locationAvailability
     );
+    Observer('show-subheader', item);
     return item;
   };
 
@@ -46,6 +49,7 @@ const Locations = () => {
 
     const bodyTitle = document.createElement('h2');
     bodyTitle.textContent = "Come say hello! We won't bite!";
+    Observer('show-subheader', bodyTitle);
     bodyLocation.appendChild(bodyTitle);
 
     // Location elements
