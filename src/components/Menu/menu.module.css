@@ -83,3 +83,20 @@
   margin-left: -97px;
   filter: drop-shadow(0 0.2rem 0.3rem black);
 }
+
+/* Animations */
+@keyframes slideDown {
+    0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-down { 
+  animation: 0.5s slideDown forwards;
+}

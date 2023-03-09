@@ -7,6 +7,8 @@ import BobaGreen from '../../../images/boba/boba2.png';
 import BobaYellow from '../../../images/boba/boba3.png';
 import BobaRed from '../../../images/boba/boba4.png';
 
+import Observer from '../../IntersectionObserver/IntersectionObserver';
+
 const Menu = () => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('wrapper');
@@ -29,6 +31,7 @@ const Menu = () => {
     bobaImage.classList.add(styles.boba);
     bobaImage.src = image;
     bobaImageContainer.appendChild(bobaImage);
+    Observer(styles['slide-down'], bobaImage);
 
     const bobaText = document.createElement('h3');
     bobaText.textContent = text;
@@ -47,6 +50,8 @@ const Menu = () => {
     const bodyTitle = document.createElement('h2');
     bodyTitle.textContent = 'Boba Tea';
     bodyContainer.appendChild(bodyTitle);
+
+    Observer(styles['slide-down'], bodyTitle);
 
     const menuContainer = document.createElement('div');
     menuContainer.classList.add(styles['menu-container']);
