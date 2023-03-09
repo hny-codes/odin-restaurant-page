@@ -3,6 +3,8 @@ import styles from './about.module.css';
 import PageHero from '../PageHero/PageHero';
 import siteImage from '../../../images/site/boba.jpg';
 
+import Observer from '../../IntersectionObserver/IntersectionObserver';
+
 const About = () => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('wrapper');
@@ -22,6 +24,7 @@ const About = () => {
     aboutItemBody.textContent = text;
 
     aboutContainer.append(aboutItemTitle, aboutItemBody);
+    Observer('show-subheader', aboutContainer);
     return aboutContainer;
   };
 
@@ -31,6 +34,7 @@ const About = () => {
 
     const bodyTitle = document.createElement('h2');
     bodyTitle.textContent = 'Learn More About Us!';
+    Observer('show-subheader', bodyTitle);
     bodyAbout.appendChild(bodyTitle);
 
     const aboutContainer = document.createElement('div');
