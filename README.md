@@ -1,6 +1,16 @@
 # odin-restaurant-page
 
-A small project for The Odin Project
+A small project for The Odin Project.
+
+Built with:
+- HTML
+- CSS
+- Javascript (Vanilla)
+
+## Project Focus:
+- Webpack
+- Intersection Observer API
+- Component-based Javascript
 
 ## Building and running on localhost
 
